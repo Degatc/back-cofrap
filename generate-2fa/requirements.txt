@@ -1,0 +1,6 @@
+pyotp
+qrcode
+psycopg2-binary
+cryptography
+Pillow
+qrcode[pil]

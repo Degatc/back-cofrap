@@ -1,0 +1,31 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  generate-password:
+    lang: python3-http
+    handler: ./generate-password
+    image: eurahub/generate-password:latest
+    secrets:
+      - fernet-key
+      - db-url
+    
+  generate-2fa:
+    lang: python3-http
+    handler: ./generate-2fa
+    image: eurahub/generate-2fa:latest
+    secrets:
+      - fernet-key
+      - db-url
+
+
+  authenticate-user:
+    lang: python3-http
+    handler: ./authenticate-user
+    image: eurahub/authenticate-user:latest
+    secrets:
+      - fernet-key
+      - db-url
+
