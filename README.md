@@ -61,7 +61,7 @@ Ce backend OpenFaaS est un PoC (Proof of Concept) pour gérer la création et l�
 ## Fonctions disponibles :
 
 - `generate-password` : génère un mot de passe sécurisé (24 char.), le chiffre en base PostgreSQL et renvoie un QR-Code pour le mot de passe
-- `generate-2fa` : génère un secret TOTP, le chiffre et stocke dans PostgreSQL, renvoie un QR-Code pour l’ajout à une app Authenticator
+- `generate-2fa` : génère un secret TOTP, le chiffre et stocke dans PostgreSQL, renvoie un QR-Code pour l’ajout à une app Authenticator ( ex: Google Authentificator )
 - `authenticate-user` : authentifie l’utilisateur via mot de passe + code TOTP, gère l’expiration (6 mois)
 
 **Worflow** :
